@@ -1,11 +1,11 @@
 const express = require("express");
-const AuthController = require("../controllers/AuthController");
-const OrderController = require("../controllers/OrderController");
-const ProductController = require("../controllers/ProductController");
 const router = express.Router();
+const AuthRouter = require("./AuthRouter");
+const ProductRouter = require("./ProductRouter");
+const OrderRouter = require("./OrderRouter");
 
-router.use(AuthController);
-router.use(OrderController);
-router.use(ProductController);
+router.use(AuthRouter);
+router.use(ProductRouter);
+router.use(OrderRouter);
 
 module.exports = router;
