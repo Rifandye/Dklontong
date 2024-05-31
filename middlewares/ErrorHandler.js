@@ -20,6 +20,12 @@ const errorHandler = (err, req, res, next) => {
     case "PasswordRequired":
       res.status(400).json({ message: "Password is Required" });
       break;
+    case "UserNotRegistered":
+      res.status(404).json({ message: "User Not Registered, Register First!" });
+      break;
+    case "InvalidPassword":
+      res.status(400).json({ message: "Invalid Password" });
+      break;
     default:
       console.log(err);
       res.status(500).json({ message: "Internal Server Error" });
