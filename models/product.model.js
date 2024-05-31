@@ -9,6 +9,11 @@ const ProductSchema = Schema(
       required: false,
     },
 
+    categoryName: {
+      type: String,
+      required: false,
+    },
+
     name: {
       type: String,
       required: [true, "Product Name is Required"],
@@ -49,10 +54,15 @@ const ProductSchema = Schema(
       required: [true, "Product Price is Required"],
     },
 
-    creator: {
+    UserId: {
       type: ObjectId,
       ref: "User",
       required: [true, "User Id is Required"],
+    },
+
+    CategoryId: {
+      type: ObjectId,
+      required: [true, "Category Is Required"],
     },
   },
   {

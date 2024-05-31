@@ -26,6 +26,15 @@ const errorHandler = (err, req, res, next) => {
     case "InvalidPassword":
       res.status(400).json({ message: "Invalid Password" });
       break;
+    case "MissingRequiredFields":
+      res.status(400).json({ message: "Must Filled All Required Fields" });
+      break;
+    case "CategoryNotFound":
+      res.status(404).json({ message: "Category Not Found" });
+      break;
+    case "ProductNotFound":
+      res.status(404).json({ message: "Product Not Found" });
+      break;
     default:
       console.log(err);
       res.status(500).json({ message: "Internal Server Error" });

@@ -1,4 +1,4 @@
-const { User } = require("../models/index");
+const UserModel = require("../models/user.model");
 const { verifyToken } = require("../utils/jwt");
 
 const authentication = async (req, res, next) => {
@@ -11,7 +11,7 @@ const authentication = async (req, res, next) => {
 
     const decodedToken = verifyToken(token);
 
-    const user = await User.findByPk(decodedToken.id);
+    const user = await UserModel.findOne(decodedToken._id);
     if (!user) throw { name: "InvalidToken" };
 
     req.user = user;

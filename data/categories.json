@@ -1,0 +1,19 @@
+[
+  { "name": "Fruits" },
+  { "name": "Vegetables" },
+  { "name": "Dairy" },
+  { "name": "Bakery" },
+  { "name": "Meat" },
+  { "name": "Seafood" },
+  { "name": "Canned Goods" },
+  { "name": "Grains" },
+  { "name": "Beverages" },
+  { "name": "Snacks" },
+  { "name": "Condiments" },
+  { "name": "Frozen Foods" },
+  { "name": "Deli" },
+  { "name": "Household" },
+  { "name": "Personal Care" },
+  { "name": "Baby Care" },
+  { "name": "Pet Supplies" }
+]
