@@ -3,6 +3,11 @@ const errorHandler = (err, req, res, next) => {
     case "InvalidToken":
       res.status(401).json({ message: "You Are Unauthorized" });
       break;
+    case "UserAlreadyRegistered":
+      res
+        .status(400)
+        .json({ message: "User Already Registered, Use Different Email" });
+      break;
     case "FirstNameRequired":
       res.status(400).json({ message: "First Name is Required" });
       break;

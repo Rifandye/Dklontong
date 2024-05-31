@@ -11,6 +11,12 @@ module.exports = class AuthController {
       if (!email) throw { name: "EmailRequired" };
       if (!password) throw { name: "PasswordRequired" };
 
+      const user = await UserModel.findOne({ email: email });
+
+      if (user) throw { name: "UserAlreadyRegistered" };
+
+      console.log(user);
+
       const hashedPass = hashPass(password);
 
       const data = await UserModel.create({
@@ -24,5 +30,9 @@ module.exports = class AuthController {
     } catch (error) {
       next(error);
     }
+  }
+
+  static async login(req, res, next) {
+    
   }
 };
