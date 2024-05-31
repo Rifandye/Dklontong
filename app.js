@@ -20,9 +20,7 @@ app.listen(port, () => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://rifandye:0rdfDh995JIgsGra@cluster0.mblecp5.mongodb.net/DKlontong?retryWrites=true&w=majority&appName=Cluster"
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to database!");
   })
