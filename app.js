@@ -4,10 +4,10 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const errorHandler = require("./middlewares/ErrorHandler");
+const connectDatabase = require("./db/db");
 const router = require("./routes/routes");
 const app = express();
 const port = 3000;
-const mongoose = require("mongoose");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -19,13 +19,6 @@ app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("Connected to database!");
-  })
-  .catch(() => {
-    console.log("Connection failed!");
-  });
+connectDatabase();
 
 module.exports = app;

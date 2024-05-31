@@ -16,8 +16,6 @@ module.exports = class AuthController {
 
       if (user) throw { name: "UserAlreadyRegistered" };
 
-      console.log(user);
-
       const hashedPass = hashPass(password);
 
       const data = await UserModel.create({
