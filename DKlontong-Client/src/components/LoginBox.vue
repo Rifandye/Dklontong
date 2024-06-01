@@ -70,7 +70,7 @@ export default {
         console.log(response.data);
         localStorage.setItem("access_token", response.data.access_token);
 
-        this.$router.push({ name: "register" });
+        this.$router.push({ name: "home" });
       } catch (error) {
         this.$swal({
           icon: "error",
