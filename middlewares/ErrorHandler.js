@@ -35,6 +35,9 @@ const errorHandler = (err, req, res, next) => {
     case "ProductNotFound":
       res.status(404).json({ message: "Product Not Found" });
       break;
+    case "FileIsRequired":
+      res.status(400).json({ message: "Product Image Required" });
+      break;
     default:
       console.log(err);
       res.status(500).json({ message: "Internal Server Error" });
