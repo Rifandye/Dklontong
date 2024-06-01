@@ -124,9 +124,11 @@ export default {
   width: 500px;
   display: flex;
   border: solid #ecedec;
+  border-left: none;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .banner-container {
@@ -134,8 +136,11 @@ export default {
   width: 500px;
   text-align: center;
   position: relative;
+  border: solid #ecedec;
+  border-left: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .banner-container img {
