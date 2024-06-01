@@ -1,11 +1,31 @@
 <template>
   <section class="centered-container">
-    <div class="login-container">
-      <form @submit.prevent="handleSubmitLogin" class="form-container">
+    <div class="register-container">
+      <form @submit.prevent="handleSubmitRegister" class="form-container">
         <div class="header">
           <h1>Welcome</h1>
         </div>
         <div class="input-field">
+          <div class="input-email">
+            <span>First Name</span>
+            <input
+              v-model="firstName"
+              type="firstName"
+              name="firstName"
+              id="firstName"
+              placeholder="Enter Your First Name"
+            />
+          </div>
+          <div class="input-email">
+            <span>Last Name</span>
+            <input
+              v-model="lastName"
+              type="lastName"
+              name="lastName"
+              id="lastName"
+              placeholder="Enter Your Last Name"
+            />
+          </div>
           <div class="input-email">
             <span>Email</span>
             <input
@@ -28,18 +48,18 @@
           </div>
           <div>
             <p class="p">
-              Don't have an account?
-              <router-link to="/register" class="span">Sign Up</router-link>
+              Already have an account?
+              <router-link to="/login" class="span">Sign In</router-link>
             </p>
           </div>
         </div>
         <div class="button">
-          <button type="submit">Login</button>
+          <button type="submit">Register</button>
         </div>
       </form>
     </div>
     <div class="banner-container">
-      <img src="/loginbanner.png" alt="Grocery banner" />
+      <img src="/registerbanner.png" alt="Grocery banner" />
     </div>
   </section>
 </template>
@@ -50,27 +70,34 @@ import axios from "axios";
 export default {
   data() {
     return {
+      firstName: "",
+      lastName: "",
       email: "",
       password: "",
     };
   },
 
   methods: {
-    async handleSubmitLogin() {
+    async handleSubmitRegister() {
       try {
-        const response = await axios({
+        await axios({
           method: "POST",
-          url: "http://localhost:3000/login",
+          url: "http://localhost:3000/register",
           data: {
+            firstName: this.firstName,
+            lastName: this.lastName,
             email: this.email,
             password: this.password,
           },
         });
 
-        console.log(response.data);
-        localStorage.setItem("access_token", response.data.access_token);
+        this.$swal({
+          icon: "success",
+          title: "Success",
+          text: "Register success! Login Into Your Account!",
+        });
 
-        this.$router.push({ name: "register" });
+        this.$router.push({ name: "login" });
       } catch (error) {
         this.$swal({
           icon: "error",
@@ -91,19 +118,19 @@ export default {
   height: 100vh;
 }
 
-.login-container {
+.register-container {
   text-align: center;
-  height: 500px;
+  height: 700px;
   width: 500px;
   display: flex;
   border: solid #ecedec;
-  background-color: #ffffff;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  background-color: #ffffff;
 }
 
 .banner-container {
-  height: 500px;
+  height: 700px;
   width: 500px;
   text-align: center;
   position: relative;
@@ -160,6 +187,7 @@ export default {
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
+  gap: 20px;
 }
 
 .input-email,
