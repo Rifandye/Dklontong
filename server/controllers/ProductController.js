@@ -105,6 +105,19 @@ module.exports = class ProductController {
     }
   }
 
+  static async updateProductById(req, res, next) {
+    try {
+      const { id } = req.params;
+      const data = req.body;
+
+      const product = ProductModel.findByIdAndUpdate(id, data, { new: true });
+
+      res.status(200).json(product);
+    } catch (error) {
+      next(error);
+    }
+  }
+
   static async uploudImgUrlById(req, res, next) {
     try {
       const { id } = req.params;
@@ -133,4 +146,6 @@ module.exports = class ProductController {
       next(error);
     }
   }
-};
+}
+
+

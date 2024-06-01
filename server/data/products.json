@@ -1,0 +1,122 @@
+[
+  {
+    "sku": "CG001",
+    "categoryName": "Canned Goods",
+    "name": "Tomato Soup",
+    "description": "Classic tomato soup in a can",
+    "weight": 300,
+    "width": 7,
+    "length": 7,
+    "height": 10,
+    "image": "https://example.com/tomato_soup.jpg",
+    "price": 25000
+  },
+  {
+    "sku": "CG002",
+    "categoryName": "Canned Goods",
+    "name": "Tuna",
+    "description": "Chunk light tuna in water",
+    "weight": 200,
+    "width": 6,
+    "length": 6,
+    "height": 4,
+    "image": "https://example.com/tuna.jpg",
+    "price": 31000
+  },
+  {
+    "sku": "CG003",
+    "categoryName": "Canned Goods",
+    "name": "Corn",
+    "description": "Sweet whole kernel corn",
+    "weight": 400,
+    "width": 8,
+    "length": 8,
+    "height": 6,
+    "image": "https://example.com/corn.jpg",
+    "price": 20000
+  },
+  {
+    "sku": "CG004",
+    "categoryName": "Canned Goods",
+    "name": "Green Beans",
+    "description": "Tender green beans in a can",
+    "weight": 350,
+    "width": 7,
+    "length": 7,
+    "height": 5,
+    "image": "https://example.com/green_beans.jpg",
+    "price": 18000
+  },
+  {
+    "sku": "CG005",
+    "categoryName": "Canned Goods",
+    "name": "Peaches",
+    "description": "Sliced peaches in syrup",
+    "weight": 450,
+    "width": 9,
+    "length": 9,
+    "height": 8,
+    "image": "https://example.com/peaches.jpg",
+    "price": 23000
+  },
+  {
+    "sku": "CG006",
+    "categoryName": "Canned Goods",
+    "name": "Black Beans",
+    "description": "Tasty black beans in a can",
+    "weight": 300,
+    "width": 7,
+    "length": 7,
+    "height": 5,
+    "image": "https://example.com/black_beans.jpg",
+    "price": 14000
+  },
+  {
+    "sku": "CG007",
+    "categoryName": "Canned Goods",
+    "name": "Pineapple Chunks",
+    "description": "Delicious pineapple chunks",
+    "weight": 500,
+    "width": 10,
+    "length": 10,
+    "height": 7,
+    "image": "https://example.com/pineapple_chunks.jpg",
+    "price": 29000
+  },
+  {
+    "sku": "CG008",
+    "categoryName": "Canned Goods",
+    "name": "Chickpeas",
+    "description": "Savory chickpeas in a can",
+    "weight": 320,
+    "width": 8,
+    "length": 8,
+    "height": 6,
+    "image": "https://example.com/chickpeas.jpg",
+    "price": 20000
+  },
+  {
+    "sku": "CG009",
+    "categoryName": "Canned Goods",
+    "name": "Mandarin Oranges",
+    "description": "Sweet mandarin oranges in syrup",
+    "weight": 400,
+    "width": 9,
+    "length": 9,
+    "height": 7,
+    "image": "https://example.com/mandarin_oranges.jpg",
+    "price": 31000
+  },
+  {
+    "sku": "CG010",
+    "categoryName": "Canned Goods",
+    "name": "Peas and Carrots",
+    "description": "Classic peas and carrots mix",
+    "weight": 350,
+    "width": 8,
+    "length": 8,
+    "height": 6,
+    "image": "https://example.com/peas_and_carrots.jpg",
+    "price": 21000
+  }
+]
