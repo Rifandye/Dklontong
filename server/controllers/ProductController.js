@@ -1,7 +1,6 @@
 const CategoryModel = require("../models/category.model");
 const ProductModel = require("../models/product.model");
 const cloudinary = require("cloudinary").v2;
-const mongoose = require("mongoose");
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -70,23 +69,17 @@ module.exports = class ProductController {
       const query = {};
 
       if (filter) {
-        query.categoryId = mongoose.Types.ObjectId(filter);
+        query.categoryName = filter;
       }
 
       if (search) {
         query.name = { $regex: search, $options: "i" };
       }
-      
+
       let limit = 10;
       let pageNumber = 1;
       if (page) {
-        if (page.size) {
-          limit = parseInt(page.size, 10);
-        }
-
-        if (page.number) {
-          pageNumber = parseInt(page.number, 10);
-        }
+        pageNumber = parseInt(page, 10);
       }
 
       const skip = (pageNumber - 1) * limit;

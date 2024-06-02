@@ -172,7 +172,7 @@ export default {
 
 .button button {
   margin: 20px 0 10px 0;
-  background-color: #151717;
+  background-color: #ffbf00;
   border: none;
   color: white;
   font-size: 15px;
@@ -184,7 +184,8 @@ export default {
 }
 
 .button button:hover {
-  background-color: #252727;
+  background-color: #ffac1c;
+  transition: 0.2s ease-in-out;
 }
 
 .input-field {
