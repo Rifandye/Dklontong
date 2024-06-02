@@ -4,7 +4,9 @@
       <div class="product-container">
         <div class="bar-container">
           <div class="add-product">
-            <button>Add Product</button>
+            <router-link to="/add-product"
+              ><button>Add Product</button>
+            </router-link>
           </div>
           <div class="search-bar">
             <input
