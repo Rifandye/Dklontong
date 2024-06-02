@@ -1,6 +1,7 @@
 const CategoryModel = require("../models/category.model");
 const ProductModel = require("../models/product.model");
 const cloudinary = require("cloudinary").v2;
+const mongoose = require("mongoose");
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -65,9 +66,52 @@ module.exports = class ProductController {
 
   static async getAllProducts(req, res, next) {
     try {
-      const data = await ProductModel.find();
+      const { filter, sort, page, search } = req.query;
+      const query = {};
 
-      res.status(200).json(data);
+      if (filter) {
+        query.categoryId = mongoose.Types.ObjectId(filter);
+      }
+
+      if (search) {
+        query.name = { $regex: search, $options: "i" };
+      }
+      
+      let limit = 10;
+      let pageNumber = 1;
+      if (page) {
+        if (page.size) {
+          limit = parseInt(page.size, 10);
+        }
+
+        if (page.number) {
+          pageNumber = parseInt(page.number, 10);
+        }
+      }
+
+      const skip = (pageNumber - 1) * limit;
+
+      const sortOption = {};
+      if (sort) {
+        const ordering = sort[0] === "-" ? -1 : 1;
+        const columnName = ordering === -1 ? sort.slice(1) : sort;
+        sortOption[columnName] = ordering;
+      }
+
+      const products = await ProductModel.find(query)
+        .sort(sortOption)
+        .skip(skip)
+        .limit(limit);
+
+      const count = await ProductModel.countDocuments(query);
+
+      res.status(200).json({
+        page: pageNumber,
+        data: products,
+        totalData: count,
+        totalPage: Math.ceil(count / limit),
+        dataPerPage: limit,
+      });
     } catch (error) {
       next(error);
     }
@@ -146,6 +190,4 @@ module.exports = class ProductController {
       next(error);
     }
   }
-}
-
-
+};
