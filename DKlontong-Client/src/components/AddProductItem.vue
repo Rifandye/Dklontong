@@ -144,7 +144,7 @@ export default {
 
         console.log(response.data);
 
-        this.$router.push({ name: "home" });
+        this.$router.push({ name: "home-cms" });
       } catch (error) {
         this.$swal({
           icon: "error",

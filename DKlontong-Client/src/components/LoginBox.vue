@@ -3,7 +3,7 @@
     <div class="login-container">
       <form @submit.prevent="handleSubmitLogin" class="form-container">
         <div class="header">
-          <h1>Welcome</h1>
+          <img src="/DKlontong.svg" alt="Logo" />
         </div>
         <div class="input-field">
           <div class="input-email">
@@ -206,6 +206,11 @@ input {
   color: #2d79f3;
   font-weight: 500;
   cursor: pointer;
+}
+
+img {
+  height: 115px;
+  width: 115px;
 }
 
 ::placeholder {

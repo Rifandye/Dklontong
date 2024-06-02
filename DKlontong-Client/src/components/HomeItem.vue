@@ -214,12 +214,12 @@ a {
 }
 
 .add-product button {
-  background-color: black;
-  border: none;
-  color: white;
+  background-color: #ffbf00;
+  border: black 1px solid;
+  color: black;
   font-size: 15px;
   font-weight: 500;
-  border-radius: 10px;
+  border-radius: 20px;
   height: 40px;
   width: 100px;
   cursor: pointer;
@@ -228,14 +228,14 @@ a {
 .search-bar {
   width: 30%;
   margin: 0 10px;
-  border-radius: 10px;
+  flex: 1;
 }
 
 .search-bar input[type="search"] {
   width: 100%;
   padding: 8px 12px;
   border: 1px solid black;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 14px;
   transition: border-color 0.3s ease;
 }
@@ -259,9 +259,9 @@ a {
 }
 
 .product {
-  border: 1px solid black;
   border-radius: 10px;
   margin: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
@@ -284,7 +284,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #ffac1c;
+  background-color: white;
 }
 
 .product-category {
@@ -292,7 +292,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #ffac1c;
+  background-color: white;
 }
 
 .product-price {
@@ -300,7 +300,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #ffac1c;
+  background-color: white;
 }
 
 .product-button {
@@ -311,12 +311,12 @@ a {
   align-items: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  background-color: #ffac1c;
+  background-color: white;
 }
 
 .product-button button {
-  background-color: black;
-  border: none;
+  background-color: white;
+  border: solid #ffbf00 1px;
   color: white;
   font-size: 15px;
   font-weight: 500;
@@ -324,6 +324,9 @@ a {
   height: 40px;
   width: 100px;
   cursor: pointer;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 button:hover {
@@ -335,7 +338,7 @@ span {
 }
 
 .product-name .name {
-  font-size: 1.2em;
+  font-size: 17px;
   font-weight: bold;
   color: #333;
 }
@@ -352,37 +355,39 @@ span {
 }
 
 .product-price .price {
-  font-size: 1.2em;
+  font-size: 1rem;
   font-weight: bold;
-  color: #008000;
+  color: black;
 }
 
 .edit-button:hover {
-  background-color: darkblue;
+  background-color: #007bff;
 }
 
 .delete-button:hover {
-  background-color: darkred;
+  background-color: #dc3545;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
-  background-color: black;
   border-radius: 10px;
 }
 
 .dropdown select {
   appearance: none;
-  background-color: transparent;
-  border: none;
+  background-color: #ffbf00;
+  border: solid black 1px;
   padding: 8px 24px 8px 8px;
   border-radius: 5px;
   font-size: 14px;
   cursor: pointer;
   outline: none;
-  color: white;
-  font-weight: bold;
+  color: black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dropdown .arrow {
@@ -405,7 +410,7 @@ span {
   background-color: transparent;
   border: none;
   color: #007bff;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
   outline: none;
 }

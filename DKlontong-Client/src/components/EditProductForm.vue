@@ -132,10 +132,7 @@ export default {
 
         console.log(response.data);
 
-        this.$router.push({
-          name: "product-detail",
-          params: { id: this.$route.params.id },
-        });
+        this.$router.push({ name: "home-cms" });
       } catch (error) {
         console.log(error.response.data);
       }
