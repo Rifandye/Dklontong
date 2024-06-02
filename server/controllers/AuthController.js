@@ -48,7 +48,7 @@ module.exports = class AuthController {
 
       const access_token = signToken({ id: user.id });
 
-      res.status(200).json({ access_token });
+      res.status(200).json({ access_token, user });
     } catch (error) {
       next(error);
     }

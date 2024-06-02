@@ -67,10 +67,17 @@ export default {
           },
         });
 
+        this.$swal({
+          icon: "success",
+          title: "Success",
+          text: `Welcome, ${response.data.user.firstName} ${response.data.user.lastName}! In This App You Can Add, Edit and Delete Products.`,
+        });
+
         console.log(response.data);
+
         localStorage.setItem("access_token", response.data.access_token);
 
-        this.$router.push({ name: "home" });
+        this.$router.push({ name: "home-cms" });
       } catch (error) {
         this.$swal({
           icon: "error",

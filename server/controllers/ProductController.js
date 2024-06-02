@@ -147,7 +147,9 @@ module.exports = class ProductController {
       const { id } = req.params;
       const data = req.body;
 
-      const product = ProductModel.findByIdAndUpdate(id, data, { new: true });
+      const product = await ProductModel.findByIdAndUpdate(id, data, {
+        new: true,
+      });
 
       res.status(200).json(product);
     } catch (error) {

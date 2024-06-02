@@ -10,7 +10,11 @@ router.post("/", ProductController.createProduct);
 router.get("/", ProductController.getAllProducts);
 router.get("/:id", ProductController.getProductById);
 router.delete("/:id", ProductController.deleteProductById);
-router.put("/:id", ProductController.updateProductById);
-router.patch("/:id", uploud.single("img"), ProductController.uploudImgUrlById);
+router.patch("/:id", ProductController.updateProductById);
+router.patch(
+  "/uploud/:id",
+  uploud.single("img"),
+  ProductController.uploudImgUrlById
+);
 
 module.exports = router;

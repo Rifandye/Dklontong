@@ -31,7 +31,12 @@
             <span class="value">{{ formatPrice(product.price) }}</span>
           </div>
           <div class="product-buttons">
-            <button class="edit-button">Edit</button>
+            <button
+              class="edit-button"
+              @click="navigateToEditProduct(product._id)"
+            >
+              Edit
+            </button>
             <button class="delete-button" @click="deleteProduct(product._id)">
               Delete
             </button>
@@ -97,12 +102,18 @@ export default {
     },
 
     formatPrice(price) {
-      // Assuming price is in cents
       const rupiah = new Intl.NumberFormat("id-ID", {
         style: "currency",
         currency: "IDR",
       }).format(price);
       return rupiah;
+    },
+
+    navigateToEditProduct(id) {
+      this.$router.push({
+        name: "product-edit",
+        params: { id: id },
+      });
     },
   },
 };

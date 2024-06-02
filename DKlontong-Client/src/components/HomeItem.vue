@@ -45,7 +45,7 @@ Copy code
               <span class="category">{{ product.categoryName }}</span>
             </div>
             <div class="product-price">
-              <span class="price">{{ `RP.${product.price}` }}</span>
+              <span class="price">{{ formatPrice(product.price) }}</span>
             </div>
             <div class="product-button">
               <button
@@ -189,6 +189,14 @@ export default {
         params: { id: id },
       });
     },
+
+    formatPrice(price) {
+      const rupiah = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+      }).format(price);
+      return rupiah;
+    },
   },
 };
 </script>
@@ -247,8 +255,7 @@ a {
 .product-card {
   margin: 30px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .product {
@@ -477,7 +484,7 @@ span {
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product-card {
     margin: 20px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 15px;
   }
 }
@@ -495,6 +502,22 @@ span {
     margin: 40px;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+  }
+
+  @media screen and (min-width: 1201px) and (max-width: 1400px) {
+    .product-card {
+      margin: 50px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1401px) and (max-width: 1600px) {
+    .product-card {
+      margin: 60px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 35px;
+    }
   }
 }
 </style>
