@@ -1,11 +1,12 @@
+Copy code
 <template>
   <div class="test">
     <section>
       <div class="product-container">
         <div class="bar-container">
           <div class="add-product">
-            <router-link to="/add-product"
-              ><button>Add Product</button>
+            <router-link to="/add-product">
+              <button>Add Product</button>
             </router-link>
           </div>
           <div class="search-bar">
@@ -31,7 +32,10 @@
         </div>
         <div class="product-card">
           <div v-for="product in products" :key="product._id" class="product">
-            <div class="product-image">
+            <div
+              class="product-image"
+              @click="navigateToProductDetail(product._id)"
+            >
               <img :src="product.image" alt="Product Image" />
             </div>
             <div class="product-name">
@@ -44,15 +48,24 @@
               <span class="price">{{ `RP.${product.price}` }}</span>
             </div>
             <div class="product-button">
-              <button class="edit-button">Edit</button>
-              <button class="delete-button">Delete</button>
+              <button
+                class="edit-button"
+                @click="navigateToEditProduct(product._id)"
+              >
+                Edit
+              </button>
+              <button class="delete-button" @click="deleteProduct(product._id)">
+                Delete
+              </button>
             </div>
           </div>
         </div>
         <div class="pagination">
           <button @click="prevPage" :disabled="page <= 1">Previous</button>
           <span>Page {{ page }} of {{ totalPage }}</span>
-          <button @click="nextPage" :disabled="page >= totalPage">Next</button>
+          <button @click.stop="nextPage" :disabled="page >= totalPage">
+            Next
+          </button>
         </div>
       </div>
     </section>
@@ -120,6 +133,29 @@ export default {
       }
     },
 
+    async deleteProduct(id) {
+      try {
+        const response = await axios({
+          method: "DELETE",
+          url: `http://localhost:3000/products/${id}`,
+          headers: {
+            Authorization: "Bearer " + localStorage.getItem("access_token"),
+          },
+        });
+
+        this.$swal({
+          title: "Success",
+          text: response.data.message,
+          icon: "success",
+          button: "OK",
+        });
+
+        this.products = this.products.filter((product) => product._id !== id);
+      } catch (error) {
+        console.log(error.response.data);
+      }
+    },
+
     filterByCategory() {
       this.fetchProducts();
     },
@@ -139,11 +175,29 @@ export default {
     searchProducts() {
       this.fetchProducts();
     },
+
+    navigateToProductDetail(id) {
+      this.$router.push({
+        name: "product-detail",
+        params: { id: id },
+      });
+    },
+
+    navigateToEditProduct(id) {
+      this.$router.push({
+        name: "product-edit",
+        params: { id: id },
+      });
+    },
   },
 };
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
+
 .bar-container {
   display: flex;
   justify-content: space-between;
