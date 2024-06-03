@@ -39,7 +39,6 @@ module.exports = class AuthController {
       if (!password) throw { name: "PasswordRequired" };
 
       const user = await UserModel.findOne({ email: email });
-      // console.log(user.id);
 
       if (!user) throw { name: "UserNotRegistered" };
 
