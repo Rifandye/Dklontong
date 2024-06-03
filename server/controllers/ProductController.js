@@ -67,6 +67,8 @@ module.exports = class ProductController {
     try {
       const { filter, sort, page, search } = req.query;
       const query = {};
+      const userId = req.user.id;
+      console.log(userId);
 
       if (filter) {
         query.categoryName = filter;
@@ -75,6 +77,8 @@ module.exports = class ProductController {
       if (search) {
         query.name = { $regex: search, $options: "i" };
       }
+
+      query.UserId = userId;
 
       let limit = 10;
       let pageNumber = 1;

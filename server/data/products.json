@@ -8,8 +8,20 @@
     "width": 7,
     "length": 7,
     "height": 10,
-    "image": "https://example.com/tomato_soup.jpg",
-    "price": 25000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351106/tomatosoup.jpeg.jpg",
+    "price": 25000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:08:05.406Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T17:58:30.810Z"
+    }
   },
   {
     "sku": "CG002",
@@ -20,8 +32,20 @@
     "width": 6,
     "length": 6,
     "height": 4,
-    "image": "https://example.com/tuna.jpg",
-    "price": 31000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351210/tuna.webp.webp",
+    "price": 31000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:08:35.656Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:00:14.080Z"
+    }
   },
   {
     "sku": "CG003",
@@ -32,8 +56,20 @@
     "width": 8,
     "length": 8,
     "height": 6,
-    "image": "https://example.com/corn.jpg",
-    "price": 20000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351234/corn.jpeg.jpg",
+    "price": 20000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:08:46.501Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:00:38.434Z"
+    }
   },
   {
     "sku": "CG004",
@@ -44,8 +80,20 @@
     "width": 7,
     "length": 7,
     "height": 5,
-    "image": "https://example.com/green_beans.jpg",
-    "price": 18000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351257/greenbeans.jpeg.jpg",
+    "price": 18000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:08:56.847Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:01:02.080Z"
+    }
   },
   {
     "sku": "CG005",
@@ -56,8 +104,20 @@
     "width": 9,
     "length": 9,
     "height": 8,
-    "image": "https://example.com/peaches.jpg",
-    "price": 23000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351283/peaches.webp.webp",
+    "price": 23000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:09:04.150Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T06:49:02.577Z"
+    }
   },
   {
     "sku": "CG006",
@@ -68,8 +128,20 @@
     "width": 7,
     "length": 7,
     "height": 5,
-    "image": "https://example.com/black_beans.jpg",
-    "price": 14000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351306/blackbeans.jpeg.jpg",
+    "price": 14000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:09:11.412Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:01:50.084Z"
+    }
   },
   {
     "sku": "CG007",
@@ -80,8 +152,20 @@
     "width": 10,
     "length": 10,
     "height": 7,
-    "image": "https://example.com/pineapple_chunks.jpg",
-    "price": 29000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351349/pinaplechunck.jpg.jpg",
+    "price": 29000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:09:18.446Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:02:33.708Z"
+    }
   },
   {
     "sku": "CG008",
@@ -92,8 +176,20 @@
     "width": 8,
     "length": 8,
     "height": 6,
-    "image": "https://example.com/chickpeas.jpg",
-    "price": 20000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351474/chickpeas.jpeg.jpg",
+    "price": 20000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:09:25.066Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:04:37.424Z"
+    }
   },
   {
     "sku": "CG009",
@@ -104,8 +200,20 @@
     "width": 9,
     "length": 9,
     "height": 7,
-    "image": "https://example.com/mandarin_oranges.jpg",
-    "price": 31000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351418/mandarinoranges.jpeg.jpg",
+    "price": 31000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:09:31.520Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-02T18:03:42.352Z"
+    }
   },
   {
     "sku": "CG010",
@@ -116,7 +224,139 @@
     "width": 8,
     "length": 8,
     "height": 6,
-    "image": "https://example.com/peas_and_carrots.jpg",
-    "price": 21000
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351383/peas%20and%20carrot.png.png",
+    "price": 21000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269b5"
+    },
+    "createdAt": {
+      "$date": "2024-06-01T06:09:38.034Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T06:48:13.552Z"
+    }
+  },
+  {
+    "sku": "HH001",
+    "categoryName": "Household",
+    "name": "Glass Cleaner",
+    "description": "Effective glass cleaner for streak-free shine",
+    "weight": 500,
+    "width": 6,
+    "length": 6,
+    "height": 10,
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717401960/glasscleaner.webp.webp",
+    "price": 15000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269bc"
+    },
+    "createdAt": {
+      "$date": "2024-06-03T07:53:31.343Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T08:06:02.422Z"
+    }
+  },
+  {
+    "sku": "HH002",
+    "categoryName": "Household",
+    "name": "Laundry Detergent",
+    "description": "Powerful laundry detergent for tough stains",
+    "weight": 1000,
+    "width": 8,
+    "length": 8,
+    "height": 12,
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402013/laundrydetergent.webp.webp",
+    "price": 25000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269bc"
+    },
+    "createdAt": {
+      "$date": "2024-06-03T07:54:17.868Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T08:06:56.817Z"
+    }
+  },
+  {
+    "sku": "",
+    "categoryName": "Household",
+    "name": "Dish Soap",
+    "description": "Gentle dish soap for clean and shiny dishes",
+    "weight": 500,
+    "width": 5,
+    "length": 5,
+    "height": 10,
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402049/dishsoap.jpeg.jpg",
+    "price": 12000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269bc"
+    },
+    "createdAt": {
+      "$date": "2024-06-03T07:54:58.392Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T08:07:31.210Z"
+    }
+  },
+  {
+    "sku": "HH005",
+    "categoryName": "Household",
+    "name": "Bathroom Cleaner",
+    "description": "Effective cleaner for bathroom surfaces and fixtures",
+    "weight": 600,
+    "width": 5,
+    "length": 5,
+    "height": 10,
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402108/bathroomcleaner.jpeg.jpg",
+    "price": 20000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269bc"
+    },
+    "createdAt": {
+      "$date": "2024-06-03T07:55:51.322Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T08:08:30.654Z"
+    }
+  },
+  {
+    "sku": "HH006",
+    "categoryName": "Household",
+    "name": "Floor Cleaner",
+    "description": "Powerful cleaner for all types of floors",
+    "weight": 1000,
+    "width": 6,
+    "length": 6,
+    "height": 10,
+    "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402154/floorcleaner.jpeg.jpg",
+    "price": 22000,
+    "UserId": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "CategoryId": {
+      "$oid": "6659b19183d6c327e48269bc"
+    },
+    "createdAt": {
+      "$date": "2024-06-03T07:56:37.323Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T08:09:16.273Z"
+    }
   }
 ]

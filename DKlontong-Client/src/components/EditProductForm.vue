@@ -1,58 +1,60 @@
 <template>
-  <section class="edit-product">
-    <h2>Edit Product</h2>
-    <form @submit.prevent="editProduct">
-      <div class="form-group">
-        <label for="sku">SKU:</label>
-        <input type="text" id="sku" v-model="sku" />
-      </div>
-      <div class="form-group">
-        <label for="category">Category Name:</label>
-        <input type="text" id="category" v-model="categoryName" />
-      </div>
-      <div class="form-group">
-        <label for="name">Product Name:</label>
-        <input type="text" id="name" v-model="name" />
-      </div>
-      <div class="form-group">
-        <label for="description">Description:</label>
-        <textarea id="description" v-model="description"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="weight">Weight (g):</label>
-        <input type="number" id="weight" v-model="weight" />
-      </div>
-      <div class="form-group">
-        <label for="dimensions">Dimensions (WxLxH cm):</label>
-        <div class="dimension-inputs">
-          <input type="number" id="width" v-model="width" />
-          <input type="number" id="length" v-model="length" />
-          <input type="number" id="height" v-model="height" />
+  <div class="edit-product-container">
+    <section class="edit-product">
+      <h2>Edit Product</h2>
+      <form @submit.prevent="editProduct">
+        <div class="form-group">
+          <label for="sku">SKU:</label>
+          <input type="text" id="sku" v-model="sku" />
         </div>
-      </div>
-      <div class="form-group">
-        <label for="image">Image URL:</label>
-        <input id="image" v-model="image" />
-      </div>
-      <div class="form-group">
-        <label for="price">Price (RP.):</label>
-        <input type="number" id="price" v-model="price" />
-      </div>
-      <div class="form-group">
-        <label for="imageFile">Upload Image:</label>
-        <input
-          type="file"
-          id="imageFile"
-          @change="handleImageUpload"
-          accept="image/*"
-        />
-      </div>
-      <div class="form-actions">
-        <button type="button" @click="uploadImage">Upload Image</button>
-        <button type="submit">Save Changes</button>
-      </div>
-    </form>
-  </section>
+        <div class="form-group">
+          <label for="category">Category Name:</label>
+          <input type="text" id="category" v-model="categoryName" />
+        </div>
+        <div class="form-group">
+          <label for="name">Product Name:</label>
+          <input type="text" id="name" v-model="name" />
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" v-model="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="weight">Weight (g):</label>
+          <input type="number" id="weight" v-model="weight" />
+        </div>
+        <div class="form-group">
+          <label for="dimensions">Dimensions (WxLxH cm):</label>
+          <div class="dimension-inputs">
+            <input type="number" id="width" v-model="width" />
+            <input type="number" id="length" v-model="length" />
+            <input type="number" id="height" v-model="height" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="image">Image URL:</label>
+          <input id="image" v-model="image" />
+        </div>
+        <div class="form-group">
+          <label for="price">Price (RP.):</label>
+          <input type="number" id="price" v-model="price" />
+        </div>
+        <div class="form-group">
+          <label for="imageFile">Upload Image:</label>
+          <input
+            type="file"
+            id="imageFile"
+            @change="handleImageUpload"
+            accept="image/*"
+          />
+        </div>
+        <div class="form-actions">
+          <button type="button" @click="uploadImage">Upload Image</button>
+          <button type="submit">Save Changes</button>
+        </div>
+      </form>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -130,11 +132,19 @@ export default {
           },
         });
 
-        console.log(response.data);
+        this.$swal({
+          title: "Success",
+          text: "Product updated successfully",
+          icon: "success",
+        });
 
         this.$router.push({ name: "home-cms" });
       } catch (error) {
-        console.log(error.response.data);
+        this.$swal({
+          title: "Error",
+          text: "Failed to update the product. Please try again.",
+          icon: "error",
+        });
       }
     },
 
@@ -188,7 +198,15 @@ export default {
 </script>
 
 <style scoped>
+.edit-product-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .edit-product {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -258,18 +276,18 @@ textarea {
 }
 
 button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: white;
+  color: black;
   cursor: pointer;
   transition: background-color 0.3s;
-  border: none;
+  border: solid orange 1px;
   padding: 10px 20px;
   font-size: 16px;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: orange;
 }
 
 button:disabled {

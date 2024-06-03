@@ -45,6 +45,7 @@
 </template>
 
 <script>
+import { useUserStore } from "@/stores/userStore";
 import axios from "axios";
 
 export default {
@@ -67,13 +68,14 @@ export default {
           },
         });
 
+        const userStore = useUserStore();
+        userStore.login();
+
         this.$swal({
           icon: "success",
           title: "Success",
           text: `Welcome, ${response.data.user.firstName} ${response.data.user.lastName}! In This App You Can Add, Edit and Delete Products.`,
         });
-
-        console.log(response.data);
 
         localStorage.setItem("access_token", response.data.access_token);
 

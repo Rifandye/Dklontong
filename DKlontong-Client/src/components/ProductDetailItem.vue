@@ -30,17 +30,17 @@
             <span class="label">Price:</span>
             <span class="value">{{ formatPrice(product.price) }}</span>
           </div>
-          <div class="product-buttons">
-            <button
-              class="edit-button"
-              @click="navigateToEditProduct(product._id)"
-            >
-              Edit
-            </button>
-            <button class="delete-button" @click="deleteProduct(product._id)">
-              Delete
-            </button>
-          </div>
+        </div>
+        <div class="product-buttons">
+          <button
+            class="edit-button"
+            @click="navigateToEditProduct(product._id)"
+          >
+            Edit
+          </button>
+          <button class="delete-button" @click="deleteProduct(product._id)">
+            Delete
+          </button>
         </div>
       </div>
     </div>
@@ -124,6 +124,8 @@ export default {
   display: flex;
   justify-content: center;
   margin-top: 50px;
+  padding: 20px;
+  margin-bottom: 150px;
 }
 
 .product-card {
@@ -140,6 +142,8 @@ export default {
 
 .product-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px 0 0 10px;
 }
 
@@ -173,6 +177,7 @@ export default {
 
 .spec {
   margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .label {
@@ -190,7 +195,7 @@ export default {
 
 .edit-button,
 .delete-button {
-  background-color: black;
+  background-color: #007bff;
   border: none;
   color: white;
   font-size: 16px;
@@ -202,10 +207,10 @@ export default {
 }
 
 .edit-button:hover {
-  background-color: darkblue;
+  background-color: #0056b3;
 }
 
 .delete-button:hover {
-  background-color: darkred;
+  background-color: #dc3545;
 }
 </style>

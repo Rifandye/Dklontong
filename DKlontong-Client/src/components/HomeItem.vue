@@ -1,4 +1,3 @@
-Copy code
 <template>
   <div class="test">
     <section>
@@ -30,42 +29,63 @@ Copy code
             </select>
           </div>
         </div>
-        <div class="product-card">
-          <div v-for="product in products" :key="product._id" class="product">
-            <div
-              class="product-image"
-              @click="navigateToProductDetail(product._id)"
-            >
-              <img :src="product.image" alt="Product Image" />
-            </div>
-            <div class="product-name">
-              <span class="name">{{ product.name }}</span>
-            </div>
-            <div class="product-category">
-              <span class="category">{{ product.categoryName }}</span>
-            </div>
-            <div class="product-price">
-              <span class="price">{{ formatPrice(product.price) }}</span>
-            </div>
-            <div class="product-button">
-              <button
-                class="edit-button"
-                @click="navigateToEditProduct(product._id)"
-              >
-                Edit
-              </button>
-              <button class="delete-button" @click="deleteProduct(product._id)">
-                Delete
-              </button>
-            </div>
-          </div>
+        <div class="product-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>SKU</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Weight</th>
+                <th>Width</th>
+                <th>Length</th>
+                <th>Height</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="product in products" :key="product._id">
+                <td class="product-image">
+                  <img
+                    :src="product.image"
+                    alt="Product Image"
+                    @click="navigateToProductDetail(product._id)"
+                  />
+                </td>
+                <td>{{ product.sku }}</td>
+                <td class="product-name">{{ product.name }}</td>
+                <td>{{ product.description }}</td>
+                <td class="product-category">{{ product.categoryName }}</td>
+                <td class="product-price">{{ formatPrice(product.price) }}</td>
+                <td>{{ product.weight }}</td>
+                <td>{{ product.width }}</td>
+                <td>{{ product.length }}</td>
+                <td>{{ product.height }}</td>
+                <td class="product-button">
+                  <button
+                    class="edit-button"
+                    @click="navigateToEditProduct(product._id)"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    class="delete-button"
+                    @click="deleteProduct(product._id)"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="pagination">
           <button @click="prevPage" :disabled="page <= 1">Previous</button>
           <span>Page {{ page }} of {{ totalPage }}</span>
-          <button @click.stop="nextPage" :disabled="page >= totalPage">
-            Next
-          </button>
+          <button @click="nextPage" :disabled="page >= totalPage">Next</button>
         </div>
       </div>
     </section>
@@ -107,7 +127,6 @@ export default {
           },
         });
 
-        console.log(response.data);
         this.products = response.data.data;
         this.page = response.data.page;
         this.totalPage = response.data.totalPage;
@@ -252,66 +271,32 @@ a {
   grid-template-rows: auto 1fr auto;
 }
 
-.product-card {
+.product-table {
   margin: 30px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.product {
-  border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product-image {
-  height: 300px;
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
-.product-image img {
+.product-table table {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-collapse: collapse;
 }
 
-.product-name {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: white;
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
 }
 
-.product-category {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: white;
+.product-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 
-.product-price {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background-color: white;
-}
-
-.product-button {
-  height: 50px;
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: white;
+img {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
 }
 
 .product-button button {
@@ -333,28 +318,21 @@ button:hover {
   transition: 0.2s ease-in-out;
 }
 
-span {
-  margin-left: 10px;
-}
-
-.product-name .name {
+.product-name {
   font-size: 17px;
   font-weight: bold;
   color: #333;
 }
 
-.product-category .category {
-  font-size: 0.7em;
-  font-weight: normal;
-  color: white;
-  background-color: #666;
-  height: 20px;
-  width: auto;
+.product-category {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  padding: 5px 10px;
   border-radius: 20px;
-  padding: 0 10px;
 }
 
-.product-price .price {
+.product-price {
   font-size: 1rem;
   font-weight: bold;
   color: black;
@@ -430,10 +408,6 @@ span {
   font-weight: bold;
 }
 
-.pagination i {
-  margin: 0 5px;
-}
-
 @media screen and (max-width: 480px) {
   .product-container {
     justify-items: center;
@@ -452,31 +426,18 @@ span {
     font-size: 12px;
   }
 
-  .product-card {
+  .product-table {
     margin: 15px;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
+    width: 100%;
   }
 
-  .product {
-    margin: 5px;
+  .product-table table {
+    font-size: 12px;
   }
 
-  .product-image {
-    height: 200px;
-  }
-
-  .product-name .name {
-    font-size: 1em;
-  }
-
-  .product-category .category {
-    font-size: 0.6em;
-    padding: 0 5px;
-  }
-
-  .product-price .price {
-    font-size: 1em;
+  .product-table td .product-image img {
+    width: 40px;
+    height: 40px;
   }
 
   .product-button button {
@@ -487,42 +448,42 @@ span {
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
-  .product-card {
+  .product-table {
     margin: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
+  }
+
+  .product-table td .product-image img {
+    width: 45px;
+    height: 45px;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .product-card {
+  .product-table {
     margin: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
   }
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-  .product-card {
+  .product-table {
     margin: 40px;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
   }
 
-  @media screen and (min-width: 1201px) and (max-width: 1400px) {
-    .product-card {
-      margin: 50px;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
+  .product-table td .product-image img {
+    width: 50px;
+    height: 50px;
   }
+}
 
-  @media screen and (min-width: 1401px) and (max-width: 1600px) {
-    .product-card {
-      margin: 60px;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 35px;
-    }
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+  .product-table {
+    margin: 50px;
+  }
+}
+
+@media screen and (min-width: 1401px) and (max-width: 1600px) {
+  .product-table {
+    margin: 60px;
   }
 }
 </style>

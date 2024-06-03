@@ -11,7 +11,8 @@ const authentication = async (req, res, next) => {
 
     const decodedToken = verifyToken(token);
 
-    const user = await UserModel.findOne(decodedToken._id);
+    const user = await UserModel.findById(decodedToken.id);
+    console.log(user);
     if (!user) throw { name: "InvalidToken" };
 
     req.user = user;

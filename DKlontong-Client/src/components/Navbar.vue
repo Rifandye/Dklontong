@@ -12,10 +12,16 @@
 </template>
 
 <script>
+import { useUserStore } from "@/stores/userStore";
+
 export default {
   methods: {
     logout() {
       localStorage.removeItem("access_token");
+
+      const userStore = useUserStore();
+      userStore.logout();
+
       this.$router.push("/login");
     },
   },
@@ -28,12 +34,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  background: linear-gradient(90deg, #ffbf00, orange);
+  background-color: #f4ab6a;
   padding: 0 20px;
   width: 100%;
-  border-left: solid black;
-  border-right: solid black;
-  border-bottom: solid black;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

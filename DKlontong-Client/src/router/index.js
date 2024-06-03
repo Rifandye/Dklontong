@@ -5,18 +5,13 @@ import HomeView from "../views/HomeView.vue";
 import AddProductView from "../views/AddProductView.vue";
 import ProductDetailView from "../views/ProductDetailView.vue";
 import EditProductView from "../views/EditProductView.vue";
-import HomePublicView from "../views/HomePublicView.vue";
+import { useUserStore } from "@/stores/userStore";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "home",
-      component: HomePublicView,
-    },
-    {
-      path: "/cms",
       name: "home-cms",
       component: HomeView,
       meta: { requiresAuth: true },
@@ -55,14 +50,16 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const isAuthenticated = localStorage.getItem("access_token");
+  const userStore = useUserStore();
+  const isAuthenticated = userStore.isAuthenticated;
+
   const requiresAuth = to.matched.some((record) => record.meta.requiresAuth);
   const requiresGuest = to.matched.some((record) => record.meta.requiresGuest);
 
   if (requiresAuth && !isAuthenticated) {
     next("/login");
   } else if (requiresGuest && isAuthenticated) {
-    next("/cms");
+    next("/");
   } else {
     next();
   }
