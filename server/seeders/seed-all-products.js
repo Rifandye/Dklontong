@@ -10,7 +10,7 @@ mongoose.connect(
 );
 
 const ProductModel = mongoose.model(
-  "Test",
+  "Product",
   new mongoose.Schema({
     sku: String,
     categoryName: String,
@@ -33,7 +33,7 @@ const ProductModel = mongoose.model(
     createdAt: Date,
     updatedAt: Date,
   }),
-  "Tests"
+  "Products"
 );
 
 const jsonData = JSON.parse(fs.readFileSync("../data/products.json", "utf-8"));

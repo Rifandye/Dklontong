@@ -11,7 +11,7 @@ mongoose.connect(
 );
 
 const ProductModel = mongoose.model(
-  "TEST",
+  "User",
   new mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     firstName: String,
@@ -21,7 +21,7 @@ const ProductModel = mongoose.model(
     createdAt: Date,
     updatedAt: Date,
   }),
-  "Tests"
+  "Users"
 );
 
 const jsonData = JSON.parse(fs.readFileSync("../data/users.json", "utf-8"));
