@@ -42,6 +42,7 @@ Within the server directory, execute the seeders:
 cd seeders
 node seed-all-categories.js
 node seed-all-products.js
+node seed-all-users.js
 ```
 
 Start the server:
@@ -79,7 +80,7 @@ npm run dev
 
 ## User Account Testing
 
-```json
+```text
 email: brikteam@example.com
 password: 123456789
 
