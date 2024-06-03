@@ -10,12 +10,8 @@
     "height": 10,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351106/tomatosoup.jpeg.jpg",
     "price": 25000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:08:05.406Z"
     },
@@ -34,12 +30,8 @@
     "height": 4,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351210/tuna.webp.webp",
     "price": 31000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:08:35.656Z"
     },
@@ -58,12 +50,8 @@
     "height": 6,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351234/corn.jpeg.jpg",
     "price": 20000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:08:46.501Z"
     },
@@ -82,12 +70,8 @@
     "height": 5,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351257/greenbeans.jpeg.jpg",
     "price": 18000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:08:56.847Z"
     },
@@ -106,12 +90,8 @@
     "height": 8,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351283/peaches.webp.webp",
     "price": 23000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:09:04.150Z"
     },
@@ -130,12 +110,8 @@
     "height": 5,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351306/blackbeans.jpeg.jpg",
     "price": 14000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:09:11.412Z"
     },
@@ -154,12 +130,8 @@
     "height": 7,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351349/pinaplechunck.jpg.jpg",
     "price": 29000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:09:18.446Z"
     },
@@ -178,12 +150,8 @@
     "height": 6,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351474/chickpeas.jpeg.jpg",
     "price": 20000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:09:25.066Z"
     },
@@ -202,12 +170,8 @@
     "height": 7,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351418/mandarinoranges.jpeg.jpg",
     "price": 31000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:09:31.520Z"
     },
@@ -226,12 +190,8 @@
     "height": 6,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717351383/peas%20and%20carrot.png.png",
     "price": 21000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269b5"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-01T06:09:38.034Z"
     },
@@ -250,12 +210,8 @@
     "height": 10,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717401960/glasscleaner.webp.webp",
     "price": 15000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269bc"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-03T07:53:31.343Z"
     },
@@ -274,12 +230,8 @@
     "height": 12,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402013/laundrydetergent.webp.webp",
     "price": 25000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269bc"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-03T07:54:17.868Z"
     },
@@ -298,12 +250,8 @@
     "height": 10,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402049/dishsoap.jpeg.jpg",
     "price": 12000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269bc"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-03T07:54:58.392Z"
     },
@@ -322,12 +270,8 @@
     "height": 10,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402108/bathroomcleaner.jpeg.jpg",
     "price": 20000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269bc"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-03T07:55:51.322Z"
     },
@@ -346,12 +290,8 @@
     "height": 10,
     "image": "https://res.cloudinary.com/dpsupok6p/image/upload/v1717402154/floorcleaner.jpeg.jpg",
     "price": 22000,
-    "UserId": {
-      "$oid": "665d6ca508240cb82e51fdd4"
-    },
-    "CategoryId": {
-      "$oid": "6659b19183d6c327e48269bc"
-    },
+    "UserId": "665d6ca508240cb82e51fdd4",
+    "CategoryId": "6659b19183d6c327e48269b5",
     "createdAt": {
       "$date": "2024-06-03T07:56:37.323Z"
     },

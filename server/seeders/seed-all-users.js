@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 const fs = require("fs");
 
@@ -10,37 +11,25 @@ mongoose.connect(
 );
 
 const ProductModel = mongoose.model(
-  "Test",
+  "TEST",
   new mongoose.Schema({
-    sku: String,
-    categoryName: String,
-    name: String,
-    description: String,
-    weight: Number,
-    width: Number,
-    length: Number,
-    height: Number,
-    image: String,
-    price: Number,
-    UserId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-    },
-    CategoryId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-    },
+    _id: mongoose.Schema.Types.ObjectId,
+    firstName: String,
+    lastName: String,
+    email: String,
+    password: String,
     createdAt: Date,
     updatedAt: Date,
   }),
   "Tests"
 );
 
-const jsonData = JSON.parse(fs.readFileSync("../data/products.json", "utf-8"));
+const jsonData = JSON.parse(fs.readFileSync("../data/users.json", "utf-8"));
 
-jsonData.forEach((product) => {
-  product.createdAt = new Date(product.createdAt.$date);
-  product.updatedAt = new Date(product.updatedAt.$date);
+jsonData.forEach((user) => {
+  user._id = user._id.$oid;
+  user.createdAt = new Date(user.createdAt.$date);
+  user.updatedAt = new Date(user.updatedAt.$date);
 });
 
 ProductModel.insertMany(jsonData)

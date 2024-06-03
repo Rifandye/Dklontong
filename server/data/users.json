@@ -1,0 +1,32 @@
+[
+  {
+    "_id": {
+      "$oid": "665b2d942a03bab5a46da70b"
+    },
+    "firstName": "This is the",
+    "lastName": "Developer",
+    "email": "developer@mail.com",
+    "password": "$2a$08$hQ4A/IRhRgK2lzve5.cONeHsVpOuBipq.0klrFPaiHKdaiHPn9sIW",
+    "createdAt": {
+      "$date": "2024-06-01T14:17:56.216Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-01T14:17:56.216Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "665d6ca508240cb82e51fdd4"
+    },
+    "firstName": "BRIK",
+    "lastName": "TEAM",
+    "email": "brikteam@example.com",
+    "password": "$2a$08$SLxQ0RnEn.tPekKUOq9h.ODR58URqOpit1NoBLkIqfBa8R7NJHs3a",
+    "createdAt": {
+      "$date": "2024-06-03T07:11:33.790Z"
+    },
+    "updatedAt": {
+      "$date": "2024-06-03T07:11:33.790Z"
+    }
+  }
+]
